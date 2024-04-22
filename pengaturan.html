@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word.ly | Pengaturan</title>
+
+  <!-- Include -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .navbar {
+      background-color: none;
+      position: fixed;
+      top: 0;
+    }
+
+    .optn-container {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #8B22DE38;
+      padding: 12px 24px 12px 24px;
+      font-family: "Poppins-Medium";
+      border-radius: 6px;
+    }
+    
+    .dropdown-menu {
+      min-width: 56px !important;
+    }
+
+    .optn-btn-cont {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-anim {
+      transition: all 0.25s ease !important;
+    }
+
+    .btn-anim:hover {
+      transform: translateY(-4px);
+      opacity: 0.65;
+    }
+  </style>
+</head>
+<body>
+  <img class="bg" src="asset/bg-home.png" alt="">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg w-100">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="asset/Word.ly.png" alt="Word.ly" width="150"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container d-flex justify-content-center align-items-center vh-100" style="padding-left: 200px; padding-right: 200px;">
+    <div class="col bg-white">
+      <div class="row align-items-center py-3 position-relative" style="background: #FFA63D; margin-left: 0 !important; margin-right: 0 !important;">
+        <img src="asset/back-btn.png" alt="Kembali" style="width: 64px; position: absolute; left: 4px; cursor: pointer;" onclick="redirectToMenu()">
+        <p class="text-center text-white align-center mb-0" style="font-size: 28px; font-family: 'Poppins-Bold';">Pengaturan</p>
+      </div>
+
+      <div class="row optn-container" style="margin-top: 24px;">
+        <div class="col-10 color-select my-auto">
+          Warna kata soal
+        </div>
+        <div class="col-2 text-end">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle color-select-bg" type="button" id="colorMenu" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #000; border-radius: 0px; width: 38px; background: #000;"></button>
+            <ul class="dropdown-menu" aria-labelledby="colorMenu">
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select', '#000')" style="border: 1px solid #000; background: #000; width: 38px; height: 38px; margin-left: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select', '#f00')" style="border: 1px solid #000; background: #f00; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select', '#00f')" style="border: 1px solid #000; background: #00f; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select', '#0f0')" style="border: 1px solid #000; background: #0f0; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row optn-container" style="margin-top: 12px;">
+        <div class="col-10 color-select-input my-auto">
+          Warna kata input
+        </div>
+        <div class="col-2 text-end">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle color-select-input-bg" type="button" id="colorMenu" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #000; border-radius: 0px; width: 38px; background: #000;"></button>
+            <ul class="dropdown-menu" aria-labelledby="colorMenu">
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select-input', '#000')" style="border: 1px solid #000; background: #000; width: 38px; height: 38px; margin-left: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select-input', '#f00')" style="border: 1px solid #000; background: #f00; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select-input', '#00f')" style="border: 1px solid #000; background: #00f; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeColor('.color-select-input', '#0f0')" style="border: 1px solid #000; background: #0f0; width: 38px; height: 38px; margin-left: 8px; margin-top: 8px;"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row optn-btn-cont">
+        <div class="col px-0">
+          <button class="my-5 py-3 btn-anim" style="border: none; border-radius: 6px; background: #DE2BB6; color: #fff; font-size: 18px; text-align: center; padding: 8px 24px 8px 24px; font-family: 'Poppins-Bold'; width: 100%;">
+            Pengaturan Akun
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Back button
+    function redirectToMenu() {
+      window.location.href = 'index.html';
+    }
+
+    //Change font color
+    function changeColor(selector, color) {
+      var elements = document.querySelectorAll(selector);
+      elements.forEach(function(element) {
+        element.style.color = color;
+      });
+
+      var bgColorSelector = selector + '-bg'; // Selector for background color
+      var bgElements = document.querySelectorAll(bgColorSelector);
+      bgElements.forEach(function(bgElement) {
+        bgElement.style.backgroundColor = color;
+      });
+    }
+  </script>
+</body>
+</html>
